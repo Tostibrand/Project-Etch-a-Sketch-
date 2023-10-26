@@ -5,7 +5,7 @@ function spawnGridSize(size){
     for(i = 1; i <= size; i++) {
     const div = document.createElement(`div`);
     div.setAttribute(`id`, i);
-    const blockSize = 100/size
+    const blockSize = 100/Math.sqrt(size)
     div.style.width = String(blockSize + `%`)
     div.style.height = String(blockSize + `%`)
     // div.textContent = i
