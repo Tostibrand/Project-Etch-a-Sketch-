@@ -17,6 +17,9 @@ function spawnGridSize(){
     container.innerHTML = ``
     // to prompt for user input for gridsize
     const size = prompt(`Enter a number to spwan a grid of squares`)
+    if (size > 10000){
+        return alert(`Input exceeds the maximum allowed gridsize of 10000 boxes, please input a number below the maximum`);
+    }
     for(i = 1; i <= size; i++) {
     const div = document.createElement(`div`);
 //set unique id for each spawned block
