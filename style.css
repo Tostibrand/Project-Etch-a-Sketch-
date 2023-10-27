@@ -1,4 +1,5 @@
 .container {
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -32,4 +33,15 @@ div:hover{
     border-radius: 10px;
     outline: solid black;
     
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height:350px;
+        width: 350px;
+    }
 }
