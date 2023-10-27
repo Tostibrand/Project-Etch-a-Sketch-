@@ -1,3 +1,14 @@
+body{
+    display: flex;  
+    flex-direction: column;
+}
+.wrapper {
+    display: flex;
+    align-items: center;
+    width: 960px;
+    background-color: red;
+    
+}
 .container {
     box-sizing: border-box;
     display: flex;
@@ -12,14 +23,27 @@
     overflow: hidden;
     
 }
-.container:hover {
+.container:hover, .wrapper:hover {
     background-color: red;
+    
+}
+#gridSize, #gridSize:hover{
+    border-radius: 5px;
+    width: fit-content;
+    height: 25px;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: white;
     
 }
 div {
     outline: solid black;
     background-color: white;
 
+}
+div.container:hover{
+    background-color: red;
 }
 div:hover{
     background-color: blue;
