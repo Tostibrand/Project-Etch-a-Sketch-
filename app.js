@@ -16,9 +16,10 @@ function spawnGridSize(){
     // To clear the grid on function call
     container.innerHTML = ``
     // to prompt for user input for gridsize
-    const size = prompt(`Enter a number to spwan a grid of squares`)
+    const size = prompt(`Enter a number to spawn a grid of squares`)
+    // guard clause for maximum input
     if (size > 10000){
-        return alert(`Input exceeds the maximum allowed gridsize of 10000 boxes, please input a number below the maximum`);
+        return alert(`Input exceeds the maximum allowed grid size of 10000 boxes, please input a number below the maximum`);
     }
     for(i = 1; i <= size; i++) {
     const div = document.createElement(`div`);
