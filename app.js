@@ -1,10 +1,15 @@
 const container = document.querySelector(`.container`);
+const input = document.querySelector(`#input`);
+
+// event listeners
+input.addEventListener(`click`, () => {spawnGridSize()}) 
 
 // spwan a grid of a size and assign a unique id to each block in the grid
-function spawnGridSize(size){
+function spawnGridSize(){
+    // prompt user to input gridsize
+    const size = prompt(`Enter a number to spwan a grid of squares`)
     for(i = 1; i <= size; i++) {
     const div = document.createElement(`div`);
-
 //set unique id for each spawned block
     div.setAttribute(`id`, i);
     
