@@ -22,9 +22,11 @@ function spawnGridSize(){
     if (size > 10000){
         return alert(`Input exceeds the maximum allowed grid size of 10000 boxes, please input a number below the maximum`);
     }
+    // guard clause to reset grid size indicator back to 0 x 0
     if (size == null){
         gridSize.textContent = `grid size: 0 x 0`
     }
+
     // to round off the input to the closest square root number
     size = Math.floor(Math.sqrt(size));
     console.log(size)
