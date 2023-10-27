@@ -16,18 +16,22 @@ function spawnGridSize(){
     // To clear the grid on function call
     container.innerHTML = ``
     // to prompt for user input for gridsize
-    const size = prompt(`Enter a number to spawn a grid of squares`)
+    let size = prompt(`How manu boxes do you want? I'll round it of to the closest root number for the perfect square`)
     // guard clause for maximum input
     if (size > 10000){
         return alert(`Input exceeds the maximum allowed grid size of 10000 boxes, please input a number below the maximum`);
     }
-    for(i = 1; i <= size; i++) {
+    // to round off the input to the closest square root number
+    size = Math.floor(Math.sqrt(size));
+    console.log(size)
+    // size = size*size;
+    for(i = 1; i <= (size*size); i++) {
     const div = document.createElement(`div`);
 //set unique id for each spawned block
     div.setAttribute(`id`, i);
     
 //Dynamically scale blocksize to always fit the parent div no matter the amount of blocks
-    const blockSize = 100/Math.sqrt(size);
+    const blockSize = 100/size;
     div.style.width = String(blockSize + `%`);
     div.style.height = String(blockSize + `%`);
     
