@@ -46,7 +46,7 @@ div {
 div.container:hover{
     background-color: red;
 }
-div:hover{
+div:hover, div.active:hover{
     background-color: blue;
 }
 #input{
