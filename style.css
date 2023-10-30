@@ -46,18 +46,21 @@ div {
 div.container:hover{
     background-color: red;
 }
-div:hover, div.active:hover{
+div:hover{
     background-color: blue;
 }
-#input{
+#input, #reset{
     height: 25px;
     width: 100px;
     font-size: 15px;
     text-align: center;
     margin: 10px;
+    margin-left: 0px;
     border-radius: 10px;
     outline: solid black;
-    
+    }
+#input{
+    margin-left: 10px;
 }
 
 @media only screen and (max-width: 600px) {
