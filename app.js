@@ -5,12 +5,27 @@ const gridSize = document.querySelector(`#gridSize`);
 // event listeners
 input.addEventListener(`click`, () => {spawnGridSize()}) 
 
+let defaultGrid = defaultGridSize(16);
 
 
 
-
-
-
+// spawn default grid size on first load and reload
+function defaultGridSize(size){
+    for(i = 1; i <= (size*size); i++) {
+        const div = document.createElement(`div`);
+    //set unique id for each spawned block
+        div.setAttribute(`id`, i);
+        
+    //Dynamically scale blocksize to always fit the parent div no matter the amount of blocks
+        const blockSize = 100/size;
+        div.style.width = String(blockSize + `%`);
+        div.style.height = String(blockSize + `%`);
+        
+        gridSize.textContent = `grid size: ${size} x ${size}`
+        gridSize.style.width = `fit-content`
+        container.append(div);
+        }
+}
 
 // spwan a grid of a size and assign a unique id to each block in the grid
 function spawnGridSize(){
