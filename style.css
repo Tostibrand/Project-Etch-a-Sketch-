@@ -60,6 +60,11 @@ div:hover{
 }
 
 @media only screen and (max-width: 600px) {
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     .container {
         box-sizing: border-box;
         display: flex;
@@ -68,4 +73,12 @@ div:hover{
         height:350px;
         width: 350px;
     }
+    .wrapper {
+        display: flex;
+        align-items: center;
+        width: 350px;
+        background-color: red;
+        
+    }
 }
+    
