@@ -17,10 +17,10 @@ function spawnGridSize(){
     // To clear the grid on function call
     container.innerHTML = ``
     // to prompt for user input for gridsize
-    let size = prompt(`How many boxes do you want? I'll round it of to the closest root number for the perfect square`)
+    let size = prompt(`How many boxes do you want? I'll round it of to the closest root number for the perfect square. Maximum 10.000 boxes`)
     // guard clause for maximum input
     if (size > 10000){
-        return alert(`Input exceeds the maximum allowed grid size of 10000 boxes, please input a number below the maximum`);
+        return alert(`Input exceeds the maximum allowed grid size of 10.000 boxes, please input a number below the maximum`);
     }
     // guard clause to reset grid size indicator back to 0 x 0
     if (size == null){
