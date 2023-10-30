@@ -39,7 +39,7 @@ body{
     
 }
 div {
-    outline: solid black;
+    /* outline: solid black; */
     background-color: white;
 
 }
