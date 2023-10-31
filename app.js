@@ -100,29 +100,22 @@ function resetGrid(){
 }
 function randomColorGenerator(){
     const number = Math.floor(Math.random()*7) + 1;
-    const red = `red`
-    const orange = `orange`
-    const yellow = `yellow`
-    const green = `green`
-    const blue = `blue`
-    const indigo = `indigo`
-    const violet = `violet`
 
-switch (number) {
+    switch (number) {
     case 1:
-        return red
+        return `red`
     case 2:
-        return orange
+        return `orange`
     case 3:
-        return yellow
+        return `yellow`
     case 4:
-        return green
+        return `green`
     case 5:
-        return blue
+        return `blue`
     case 6:
-        return indigo
+        return `indigo`
     case 7:
-        return violet    
+        return `violet`   
         
 }
 }
