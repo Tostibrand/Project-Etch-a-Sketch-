@@ -64,5 +64,6 @@ function spawnGridSize(){
 
 function resetGrid(){
     container.innerHTML = ``;
+    container.style.backgroundColor = `red`;
     generateGridSize(size);
 }
