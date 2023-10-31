@@ -4,6 +4,7 @@ const gridSize = document.querySelector(`#gridSize`);
 const reset = document.querySelector(`#reset`);
 const active = document.querySelectorAll(`.active`)
 
+
 // event listeners
 input.addEventListener(`click`, () => {spawnGridSize()})
 reset.addEventListener(`click`, () => {resetGrid()})
@@ -66,4 +67,33 @@ function resetGrid(){
     container.innerHTML = ``;
     container.style.backgroundColor = `red`;
     generateGridSize(size);
+}
+
+function randomColorGenerator(){
+    const number = Math.floor(Math.random()*7) + 1;
+    const red = `red`
+    const orange = `orange`
+    const yellow = `yellow`
+    const green = `green`
+    const blue = `blue`
+    const indigo = `indigo`
+    const violet = `violet`
+
+switch (number) {
+    case 1:
+        return red
+    case 2:
+        return orange
+    case 3:
+        return yellow
+    case 4:
+        return green
+    case 5:
+        return blue
+    case 6:
+        return indigo
+    case 7:
+        return violet    
+        
+}
 }
