@@ -1,3 +1,6 @@
+//////////// 
+// Values //
+////////////
 const container = document.querySelector(`.container`);
 const input = document.querySelector(`#input`);
 const gridSize = document.querySelector(`#gridSize`);
@@ -5,13 +8,15 @@ const reset = document.querySelector(`#reset`);
 const active = document.querySelectorAll(`.active`)
 const black = document.querySelector(`#black`)
 const rainbow = document.querySelector(`#rainbow`)
-
+///////////////
+// Variables //
+///////////////
 let color = ``
 let defaultGrid = generateGridSize(16);
 let size = 16
-
-
-// event listeners
+/////////////////////
+// EVENT LISTENERS //
+/////////////////////
 input.addEventListener(`click`, () => {spawnGridSize()})
 reset.addEventListener(`click`, () => {resetGrid()})
 black.addEventListener(`click`, () => {
@@ -43,6 +48,9 @@ container.addEventListener
         event.target.style.backgroundColor = `black`
      }
 });
+///////////////
+// FUNCTIONS //
+///////////////
 // spawn default grid size on first load and reload
 function generateGridSize(size){
         // guard clause for maximum input
