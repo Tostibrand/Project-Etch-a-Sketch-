@@ -3,17 +3,45 @@ const input = document.querySelector(`#input`);
 const gridSize = document.querySelector(`#gridSize`);
 const reset = document.querySelector(`#reset`);
 const active = document.querySelectorAll(`.active`)
+const black = document.querySelector(`#black`)
+const rainbow = document.querySelector(`#rainbow`)
+let color = ``
 
 
 // event listeners
 input.addEventListener(`click`, () => {spawnGridSize()})
 reset.addEventListener(`click`, () => {resetGrid()})
+
+black.addEventListener(`click`, () => {
+    color = `black`;
+    black.style.color = `yellow`;
+    black.style.scale = `1.2`;
+    rainbow.style.color = `black`;
+    rainbow.style.backgroundColor = `white`;
+    rainbow.style.scale =`1`;
+})
+
+rainbow.addEventListener(`click`, () => {
+    color = `rainbow`;
+    rainbow.style.color = `black`;
+    rainbow.style.scale =`1.2`;
+    rainbow.style.backgroundColor = randomColorGenerator();
+    black.style.backgroundColor = `black`;
+    black.style.scale = `1`;
+    black.style.color = `white`;
+});
+
+
 container.addEventListener
 ('mousemove', (event) => {
     
-    if(event.buttons == 1) {
+    if(event.buttons == 1 && color == `rainbow`) {
      event.preventDefault();
-     event.target.style.backgroundColor = `black`
+     event.target.style.backgroundColor = randomColorGenerator();
+     }
+     else if (event.buttons == 1 && color == `black`) {
+        event.preventDefault();
+        event.target.style.backgroundColor = `black`
      }
    });
 
@@ -66,6 +94,12 @@ function spawnGridSize(){
 function resetGrid(){
     container.innerHTML = ``;
     container.style.backgroundColor = `red`;
+    black.style.backgroundColor = `black`
+    black.style.scale = `1`
+    black.style.color = `white`
+    rainbow.style.color = `black`
+    rainbow.style.backgroundColor = `white`
+    rainbow.style.scale =`1`
     generateGridSize(size);
 }
 
