@@ -84,5 +84,12 @@ div:hover{
         background-color: red;
         
     }
+    #gridSize{
+        font-size: 11px;
+        text-align: center;
+        width: fit-content;
+        height: fit-content;
+        padding: 5px;
+    }
 }
     
