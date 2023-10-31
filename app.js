@@ -5,13 +5,15 @@ const reset = document.querySelector(`#reset`);
 const active = document.querySelectorAll(`.active`)
 const black = document.querySelector(`#black`)
 const rainbow = document.querySelector(`#rainbow`)
+
 let color = ``
+let defaultGrid = generateGridSize(16);
+let size = 16
 
 
 // event listeners
 input.addEventListener(`click`, () => {spawnGridSize()})
 reset.addEventListener(`click`, () => {resetGrid()})
-
 black.addEventListener(`click`, () => {
     color = `black`;
     black.style.color = `yellow`;
@@ -20,7 +22,6 @@ black.addEventListener(`click`, () => {
     rainbow.style.backgroundColor = `white`;
     rainbow.style.scale =`1`;
 })
-
 rainbow.addEventListener(`click`, () => {
     color = `rainbow`;
     rainbow.style.color = `black`;
@@ -30,8 +31,6 @@ rainbow.addEventListener(`click`, () => {
     black.style.scale = `1`;
     black.style.color = `white`;
 });
-
-
 container.addEventListener
 ('mousemove', (event) => {
     
@@ -43,16 +42,7 @@ container.addEventListener
         event.preventDefault();
         event.target.style.backgroundColor = `black`
      }
-   });
-
-
-
-
-let defaultGrid = generateGridSize(16);
-
-let size = 16
-
-
+});
 // spawn default grid size on first load and reload
 function generateGridSize(size){
         // guard clause for maximum input
@@ -79,7 +69,6 @@ function generateGridSize(size){
         container.append(div);
         }
 }
-
 // spwan a grid of a size
 function spawnGridSize(){
     // To clear the grid on function call
@@ -90,7 +79,6 @@ function spawnGridSize(){
     
 
 }
-
 function resetGrid(){
     container.innerHTML = ``;
     container.style.backgroundColor = `red`;
@@ -102,7 +90,6 @@ function resetGrid(){
     rainbow.style.scale =`1`
     generateGridSize(size);
 }
-
 function randomColorGenerator(){
     const number = Math.floor(Math.random()*7) + 1;
     const red = `red`
